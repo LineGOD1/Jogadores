@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="São José 2.css">
+
+  <title>Cadastrar</title>
+
+</head>
+
+<body>
+
+<a class = "fonte2">CRIAR</a>
+
+<main>
+
+  <div class="bloco">
+
+
+    <form action="#" th:action="@{/cadastro}" th:object="${cliente}" method="post">
+      <label class="lbl" for="nick">Nick</label> <br> <br>
+      <input th:field="*{nick}" id="nick" type="text" class = "input" placeholder="Digite seu nick:"></input> <br> <br>
+      <label class="lbl" for="nome">Nome</label> <br> <br>
+      <input th:field="*{nome}" id="nome" type="text" class = "input" placeholder="Digite seu nome completo:"></input> <br> <br>
+      <label class="lbl" for="jogador">Jogador</label> <br> <br>
+      <input th:field="*{jogador}" id="jogador" type="text" class = "input" placeholder="Digite seu jogador favorito:"></input> <br> <br>
+      <input type="submit" value="Salvar" /><br> <br><br> <br><br> <br>
+    </form>
+
+  </div>
+</main>
+
+
+</body>
+
+</html>
